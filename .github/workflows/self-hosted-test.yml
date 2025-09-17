@@ -1,0 +1,8 @@
+name: self-hosted-test
+on:
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: [self-hosted, atlab-registry]
+    steps:
+      - run: echo "hello from self-hosted on $HOSTNAME"
